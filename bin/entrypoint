@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [ -e /app/.entryscript ]; then
+  source /app/.entryscript
+fi
+
+exec "$@" 2>&1
