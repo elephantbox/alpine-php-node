@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-if [ -e /app/.entryscript ]; then
-  source /app/.entryscript
+if [ -e /app/.elephantbox/entryscript ]; then
+  source /app/.elephantbox/entryscript
 fi
 
 exec "$@" 2>&1

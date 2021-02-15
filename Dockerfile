@@ -7,6 +7,7 @@ ENV TERM="xterm-256color" \
   PHP_MEMORY_LIMIT="256M" \
   PHP_OPCACHE_ENABLED="1" \
   PHP_OPCACHE_VALIDATE_TIMESTAMPS="0" \
+  PHP_OPCACHE_BLACKLIST_FILENAME="/etc/php/opcache-enabled.blacklist" \
   COMPOSER_ALLOW_SUPERUSER="1" \
   APP_ENV="production" \
   APP_NAME="elephantbox-app"
@@ -17,6 +18,7 @@ RUN echo "https://dl.bintray.com/php-alpine/v3.12/php-8.0" >> /etc/apk/repositor
 
 RUN apk --update-cache add ca-certificates \
   && apk add --update --no-cache \
+    less \
     bash \
     curl \
     nano \
